@@ -46,7 +46,7 @@ def simulation_fifo(df,num_frames):
             frames.append(page)
             page_table[page]= len(frames) -1 #numero de marco fisico donde esta guardado.
 
-    log.append(
+        log.append(
             {
                 "time": time,
                 "pid": pid,
@@ -56,7 +56,7 @@ def simulation_fifo(df,num_frames):
                 "frames": str(frames),
             }
         )
-
+    
     return pd.DataFrame(log)
 
 def guardar_en_sql(df):
